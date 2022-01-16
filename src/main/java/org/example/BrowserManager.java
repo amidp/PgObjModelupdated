@@ -8,7 +8,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static org.example.Utils.currentTimeStamp;
-
 //create BrowserManage class
 public class BrowserManager extends BasePage
 {
@@ -17,16 +16,12 @@ public class BrowserManager extends BasePage
     public static final String AUTOMATE_ACCESS_KEY = "swrMELyxZW1TYarysfRE";
     public static final String BrowserStack = "https://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
     DesiredCapabilities caps = new DesiredCapabilities();
-
-        //create object for browsername
-    public String browserName="chrome";
-
-    //public String browserName=System.getProperty("browser");
+    //create object for browsername
+   // public String browserName="chrome";
+    public String browserName=System.getProperty("browser");
     boolean cloud = false;
-  //  boolean cloud = Boolean.parseBoolean(System.getProperty("true"));
-
+  //boolean cloud = Boolean.parseBoolean(System.getProperty("true"));
     boolean browserStackUrl = Boolean.parseBoolean(System.getProperty("cloud"));
-
 public void openBrowser()
 {
     //  if cloud condition true - run in cloud
